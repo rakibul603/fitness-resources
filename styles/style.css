@@ -134,6 +134,44 @@ nav span {
     border-radius: 50%;
 }
 
+
+/* trainings  section  */
+
+.grid-container {
+    max-width: 1200px;
+    min-height: 400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 300px);
+}
+
+.grid-container img {
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+}
+
+.grid-container > div {
+    position: relative;
+
+}
+
+.grid-container > div > p {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
+
+.box-2 {
+    grid-column: 2 / span 2;
+}
+
+.box-4 {
+    grid-column: 1 / span 2;
+}
+
+
 /* responsive codes  */
 
 @media screen and (max-width: 470px) {
@@ -148,7 +186,25 @@ nav span {
     .banner-container {
         flex-direction: column;
     }
-    .banner-right, .banner-left {
+
+    .banner-right,
+    .banner-left {
         width: 100%;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .box-2 {
+        grid-column: auto;
+    }
+
+    .box-4 {
+        grid-column: auto;
+    }
+
+    .box-1, .box-3{
+        display: none;
     }
 }
