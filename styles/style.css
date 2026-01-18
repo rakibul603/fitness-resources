@@ -17,11 +17,10 @@ body {
     background-color: rgba(0, 0, 0, 1);
     color: white;
     font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
+    font-optical-sizing: auto;
 }
 
 nav {
-    border: 2px solid red;
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
@@ -29,7 +28,6 @@ nav {
 }
 
 nav>p {
-    border: 2px solid green;
     font-size: 36px;
     color: #e6533c;
     font-weight: bold;
@@ -45,6 +43,12 @@ nav div {
     padding: 3px 5px;
 }
 
+nav span {
+    margin-right: 10px;
+    margin-top: 10px;
+    display: none;
+}
+
 .home-btn {
     background-color: #e6533c;
     padding: 5px 10px;
@@ -53,9 +57,98 @@ nav div {
 }
 
 
+.banner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.banner-left {
+    min-height: 200px;
+    padding: 10px;
+    width: 50%;
+
+}
+
+.banner-left>h1 {
+    font-size: 78px;
+}
+
+.banner-left>p {
+    margin: 28px 0;
+}
+
+.btn-container>button {
+    width: 200px;
+    height: 54px;
+    color: white;
+    border-radius: 42px;
+}
 
 
+.banner-right {
+    display: flex;
+    justify-content: end;
+    min-height: 200px;
+    padding: 50px;
+    width: 50%;
+    position: relative;
+}
 
+
+.banner-right img {
+    width: 52%;
+    object-fit: cover;
+}
+
+.tooltip {
+    background-color: rgba(128, 128, 128, 0.313);
+    position: absolute;
+    top: 20%;
+    right: -10%;
+    width: 193px;
+    height: 98px;
+    padding-left: 20px;
+    padding-top: 20px;
+    border-radius: 12px;
+}
+
+
+.tooltip-2 {
+    background-color: rgba(64, 58, 58, 0.313);
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    background-color: #e6533c;
+    border-radius: 50%;
+}
 
 /* responsive codes  */
 
+@media screen and (max-width: 470px) {
+    .menu-container {
+        display: none;
+    }
+
+    nav span {
+        display: inline;
+    }
+
+    .banner-container {
+        flex-direction: column;
+    }
+    .banner-right, .banner-left {
+        width: 100%;
+    }
+}
